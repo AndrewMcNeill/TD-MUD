@@ -1,5 +1,6 @@
 from Core import Game
 from Client import ClientHost
+from Server import ServerHost
 
 import sys
 
@@ -10,8 +11,7 @@ def main():
         if sys.argv[1] == "client" or sys.argv[1] == "c":
             host = ClientHost()
         elif sys.argv[1] == "server" or sys.argv[1] == "s":
-            # TODO: Add server Host
-            pass
+            host = ServerHost()
     else:
         host = ClientHost()
     game = Game(host)
